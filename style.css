@@ -821,13 +821,14 @@ body {
 
   .hero-section {
     min-height: auto;
-    padding: 100px 0 30px 0;
+    padding: 115px 0 30px 0;
   }
 
   .portfolio-watermark {
-    top: 70px;
-    font-size: clamp(60px, 18vw, 180px);
-    -webkit-text-stroke: 1.5px rgba(229, 9, 20, 0.28);
+    top: 45px;
+    font-size: clamp(52px, 14vw, 110px);
+    letter-spacing: 4px;
+    -webkit-text-stroke: 1.2px rgba(229, 9, 20, 0.35);
   }
 
   .script-greeting {
@@ -893,10 +894,15 @@ body {
     justify-content: space-between;
   }
 
+  .hero-section {
+    padding: 120px 0 24px 0;
+  }
+
   .portfolio-watermark {
-    top: 90px;
-    font-size: clamp(44px, 16vw, 120px);
-    letter-spacing: 2px;
+    top: 65px;
+    font-size: clamp(38px, 12.5vw, 72px);
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px rgba(229, 9, 20, 0.35);
   }
 
   .hero-name {
