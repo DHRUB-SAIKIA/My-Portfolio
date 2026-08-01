@@ -88,14 +88,17 @@ function renderFrame(index) {
   if (viewRatio > imgRatio) {
     drawW = viewWidth;
     drawH = viewWidth / imgRatio;
-    x = 0;
-    y = (viewHeight - drawH) / 2;
   } else {
     drawW = viewHeight * imgRatio;
     drawH = viewHeight;
-    x = (viewWidth - drawW) / 2;
-    y = 0;
   }
+
+  // Slight 4% zoom crop to hide edge watermarks (such as Veo)
+  const ZOOM = 1.04;
+  drawW *= ZOOM;
+  drawH *= ZOOM;
+  x = (viewWidth - drawW) / 2;
+  y = (viewHeight - drawH) / 2;
 
   ctx.clearRect(0, 0, viewWidth, viewHeight);
   ctx.drawImage(img, x, y, drawW, drawH);
