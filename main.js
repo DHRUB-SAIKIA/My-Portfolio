@@ -44,10 +44,13 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Get frame path e.g. /frames/ezgif-frame-001.jpg
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
+// Get frame path respecting Vite BASE_URL for GitHub Pages
 function getFramePath(index) {
   const paddedNumber = String(index).padStart(3, '0');
-  return `/frames/ezgif-frame-${paddedNumber}.jpg`;
+  const base = BASE_URL.endsWith('/') ? BASE_URL : `${BASE_URL}/`;
+  return `${base}frames/ezgif-frame-${paddedNumber}.jpg`;
 }
 
 // Canvas sizing & resolution setup
