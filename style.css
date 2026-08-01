@@ -763,10 +763,93 @@ body {
   text-align: center;
 }
 
-/* Responsive Media Queries */
+/* ==========================================
+   Comprehensive Responsive System for All Devices
+   ========================================== */
+
+/* Large Tablets & Small Laptops (1025px - 1200px) */
+@media (max-width: 1200px) {
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .quote-col {
+    grid-column: span 2;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-right {
+    grid-column: span 2;
+  }
+}
+
+/* Tablets (769px - 1024px) */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-right {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile & Small Tablets (481px - 768px) */
+@media (max-width: 768px) {
+  .content-wrapper {
+    width: 100%;
+    padding: 0 16px 40px 16px;
+  }
+
+  .top-nav {
+    padding: 16px 0;
+    font-size: 11px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 100px 0 30px 0;
+  }
+
+  .portfolio-watermark {
+    top: 70px;
+    font-size: clamp(60px, 18vw, 180px);
+    -webkit-text-stroke: 1.5px rgba(229, 9, 20, 0.28);
+  }
+
+  .script-greeting {
+    font-size: 2.2rem;
+  }
+
+  .hero-name {
+    font-size: clamp(48px, 14vw, 76px);
+  }
+
+  .hero-right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-stats {
+    justify-content: space-between;
+  }
+
+  .stat-num {
+    font-size: 32px;
+    min-width: 50px;
   }
 
   .projects-grid {
@@ -775,9 +858,92 @@ body {
 
   .info-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .quote-col {
+    grid-column: span 1;
+  }
+
+  .info-col {
+    padding: 24px 20px;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
+    padding: 28px 20px;
+    gap: 28px;
+  }
+
+  .contact-right {
+    grid-column: span 1;
+  }
+}
+
+/* Extra Small Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .portfolio-watermark {
+    top: 90px;
+    font-size: clamp(44px, 16vw, 120px);
+    letter-spacing: 2px;
+  }
+
+  .hero-name {
+    font-size: clamp(38px, 13vw, 56px);
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-line {
+    display: none;
+  }
+
+  .project-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .project-num {
+    font-size: 22px;
+  }
+
+  .project-meta {
+    margin: 0;
+  }
+
+  .project-arrow {
+    display: none;
+  }
+
+  .contact-item {
+    font-size: 13px;
+    padding: 12px 16px;
+    word-break: break-all;
+  }
+
+  .availability-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
